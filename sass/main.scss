@@ -1,0 +1,36 @@
+@import "bourbon";
+@import "neat";
+@import "font-awesome";
+
+body {
+  background: #e2ebf3;
+}
+.app{
+  max-width: 75%;
+  margin: 0 auto;
+}
+.top{
+  max-width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+.mainDivs{
+  max-width: 25%;
+  float: left;
+  margin: 20px 2.5%;
+  img{
+  float: left;
+  max-width: 100%;
+  height: 200px;
+  margin: 0 auto;
+  } .likesCaption{
+    clear: left;
+    max-width: 100%;
+  } .likesCaption p{
+      white-space: nowrap;
+      width: 100%;                   
+      overflow: hidden;             
+      text-overflow: ellipsis;
+  }
+}
+

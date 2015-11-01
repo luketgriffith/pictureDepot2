@@ -343,7 +343,10 @@ var Router = _backbone2['default'].Router.extend({
   addPic: function addPic() {
     var _this4 = this;
 
-    _reactDom2['default'].render(_react2['default'].createElement(_router_pagesAdd_pic2['default'], { savePicture: function () {
+    _reactDom2['default'].render(_react2['default'].createElement(_router_pagesAdd_pic2['default'], { backHome: function () {
+        return _this4.goto('/');
+      },
+      savePicture: function () {
         var name = document.querySelector('.nameInput').value;
         var imgUrl = document.querySelector('.imgInput').value;
         var newCap = document.querySelector('.captionInput').value;
@@ -384,17 +387,38 @@ exports['default'] = _react2['default'].createClass({
     this.props.savePicture();
   },
 
+  goBack: function goBack() {
+    this.props.backHome();
+  },
   render: function render() {
     return _react2['default'].createElement(
       'div',
       null,
-      _react2['default'].createElement('input', { type: 'text', placeholder: 'User Name', className: 'nameInput' }),
-      _react2['default'].createElement('input', { type: 'text', placeholder: 'Image URL', className: 'imgInput' }),
-      _react2['default'].createElement('textarea', { type: 'text', placeholder: 'Caption', className: 'captionInput' }),
       _react2['default'].createElement(
-        'button',
-        { onClick: this.savePic },
-        'Save'
+        'div',
+        { className: 'addDiv' },
+        _react2['default'].createElement(
+          'h1',
+          null,
+          'Add A Photo'
+        ),
+        _react2['default'].createElement('input', { type: 'text', placeholder: 'New Name', className: 'nameInput' }),
+        _react2['default'].createElement('input', { type: 'text', placeholder: 'Image URL', className: 'imgInput' }),
+        _react2['default'].createElement('textarea', { type: 'text', placeholder: 'Caption', className: 'captionInput' })
+      ),
+      _react2['default'].createElement(
+        'div',
+        { className: 'btnClass' },
+        _react2['default'].createElement(
+          'button',
+          { className: 'saveBtn', onClick: this.savePic },
+          'Save'
+        ),
+        _react2['default'].createElement(
+          'button',
+          { className: 'backBtn', onClick: this.goBack },
+          'Back'
+        )
       )
     );
   }
@@ -541,16 +565,21 @@ exports['default'] = _react2['default'].createClass({
       _react2['default'].createElement(
         'h2',
         null,
+        '@',
         item.userName
       ),
-      _react2['default'].createElement('img', { src: item.image }),
+      _react2['default'].createElement(
+        'div',
+        { className: 'imgDiv' },
+        _react2['default'].createElement('img', { src: item.image })
+      ),
       _react2['default'].createElement(
         'div',
         { className: 'likesCaption' },
         _react2['default'].createElement(
           'span',
           null,
-          'Likes: ',
+          'Likes:   ',
           item.likes
         ),
         _react2['default'].createElement(

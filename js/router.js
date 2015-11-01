@@ -103,7 +103,8 @@ let Router = Backbone.Router.extend({
   },
 
   addPic(){
-    ReactDom.render(<AddPicture savePicture={()=>{
+    ReactDom.render(<AddPicture backHome = {()=>this.goto(`/`)} 
+    savePicture={()=>{
     let name = document.querySelector('.nameInput').value;
     let imgUrl = document.querySelector('.imgInput').value;
     let newCap = document.querySelector('.captionInput').value;

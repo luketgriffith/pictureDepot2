@@ -296,7 +296,13 @@ var Router = _backbone2['default'].Router.extend({
       thumbTitle: dumpster.userName,
       likes: dumpster.likes,
       cap: dumpster.caption,
-
+      deleteImg: function () {
+        var picDel = new _resourcesModel2['default']({
+          objectId: dumpster.objectId
+        });
+        picDel.destroy();
+        _this2.goto('/');
+      },
       editPost: function () {
         _this2.goto('edit/' + dumpster.objectId);
       },
@@ -632,7 +638,9 @@ exports['default'] = _react2['default'].createClass({
   gohome: function gohome() {
     this.props.goback();
   },
-
+  remove: function remove() {
+    this.props.deleteImg();
+  },
   thumbnail: function thumbnail(image) {},
   thumbTitle: function thumbTitle(image) {},
   cap: function cap(image) {},
@@ -670,6 +678,7 @@ exports['default'] = _react2['default'].createClass({
       _react2['default'].createElement(
         'button',
         { onClick: this.likeIt },
+        _react2['default'].createElement('i', { className: 'fa fa-heart' }),
         'Like'
       ),
       _react2['default'].createElement(
@@ -683,6 +692,11 @@ exports['default'] = _react2['default'].createClass({
             return _this.edit();
           } },
         'Edit Post'
+      ),
+      _react2['default'].createElement(
+        'button',
+        { onClick: this.remove },
+        'Delete Photo'
       )
     );
   }

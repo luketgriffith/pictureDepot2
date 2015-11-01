@@ -59,7 +59,13 @@ let Router = Backbone.Router.extend({
     thumbTitle={dumpster.userName} 
     likes = {dumpster.likes}
     cap={dumpster.caption}
-    
+    deleteImg={()=>{
+      let picDel= new UserModel({
+        objectId: dumpster.objectId
+      });
+      picDel.destroy();
+      this.goto(`/`);
+    }}
     editPost={()=>{this.goto(`edit/${dumpster.objectId}`)}
     
     }

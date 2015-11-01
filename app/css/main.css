@@ -2084,7 +2084,10 @@ body {
 .addDiv {
   max-width: 75%;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  color: #E9E9E9;
+  border-bottom: 1px solid #4EB1BA;
+  font-family: 'BenchNine', sans-serif; }
 
 .nameInput {
   width: 50%;
@@ -2130,7 +2133,8 @@ body {
     font-weight: bold; }
   .chimichangas button {
     color: #4EB1BA;
-    font-weight: bold; }
+    font-weight: bold;
+    margin: 3px; }
 
 .enchiladas {
   width: 100%;
@@ -2152,6 +2156,13 @@ body {
     font-weight: bold; }
   .enchiladas button {
     color: #4EB1BA;
-    font-weight: bold; }
+    font-weight: bold;
+    margin: 3px; }
+  .enchiladas input {
+    display: block;
+    margin: 3px auto; }
+  .enchiladas textarea {
+    display: block;
+    margin: 3px auto; }
 
 /*# sourceMappingURL=main.css.map */

@@ -70,6 +70,9 @@ body {
   max-width: 75%;
   margin: 0 auto;
   text-align: center;
+  color: #E9E9E9;
+  border-bottom: 1px solid #4EB1BA;
+  font-family: 'BenchNine', sans-serif;
 }
 .nameInput{
   width: 50%;
@@ -118,6 +121,7 @@ body {
   button{
     color: #4EB1BA;
     font-weight: bold;
+    margin: 3px;
   }
 }
 .enchiladas{
@@ -142,5 +146,15 @@ body {
   button{
     color: #4EB1BA;
     font-weight: bold;
+    margin: 3px;
+  }
+  input{
+    display: block;
+    margin: 3px auto;
+    
+  }
+  textarea{
+    display: block;
+    margin: 3px auto;
   }
 }

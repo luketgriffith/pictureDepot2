@@ -6,7 +6,9 @@ export default React.createClass({
   gohome(){
     this.props.goback();
   },
-
+  remove(){
+    this.props.deleteImg();
+  },
   thumbnail(image){
  
   },
@@ -32,9 +34,10 @@ export default React.createClass({
         <img src={this.props.thumbnail} />
         <span className='likesSpan'>Likes: {this.props.likes}</span>
         <p>{this.props.cap}</p>
-        <button onClick={this.likeIt}>Like</button>
+        <button onClick={this.likeIt}><i className="fa fa-heart"></i>Like</button>
         <button onClick={this.gohome}>Go Back</button>
         <button onClick={(event)=>this.edit()}>Edit Post</button>
+        <button onClick={this.remove}>Delete Photo</button>
       </div>
     );
   }

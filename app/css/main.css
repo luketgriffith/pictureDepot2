@@ -2046,7 +2046,7 @@ body {
 .mainDivs {
   width: 25%;
   float: left;
-  margin: 20px 3.5%;
+  margin: 20px 4.15%;
   background-color: #4EB1BA;
   border-radius: 5px;
   font-family: 'BenchNine', sans-serif;
@@ -2164,5 +2164,13 @@ body {
   .enchiladas textarea {
     display: block;
     margin: 3px auto; }
+
+@media screen and (max-width: 950px) {
+  .mainDivs {
+    width: 40%; } }
+
+@media screen and (max-width: 650px) {
+  .mainDivs {
+    width: 80%; } }
 
 /*# sourceMappingURL=main.css.map */

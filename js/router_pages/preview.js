@@ -28,9 +28,9 @@ export default React.createClass({
   render() {
     return (
       <div className= 'chimichangas'>
-        <h2>{this.props.thumbTitle}</h2>
-        <img src={this.props.thumbnail}/>
-        <span>Likes: {this.props.likes}</span>
+        <h2>@{this.props.thumbTitle}</h2>
+        <img src={this.props.thumbnail} />
+        <span className='likesSpan'>Likes: {this.props.likes}</span>
         <p>{this.props.cap}</p>
         <button onClick={this.likeIt}>Like</button>
         <button onClick={this.gohome}>Go Back</button>

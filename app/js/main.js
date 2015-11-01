@@ -319,6 +319,9 @@ var Router = _backbone2['default'].Router.extend({
       return item.objectId === id;
     });
     _reactDom2['default'].render(_react2['default'].createElement(_router_pagesEdit_post2['default'], {
+      goback: function () {
+        return _this3.goto('/');
+      },
       thumbnail: dumpster.image,
       thumbTitle: dumpster.userName,
       likes: dumpster.likes,
@@ -649,12 +652,13 @@ exports['default'] = _react2['default'].createClass({
       _react2['default'].createElement(
         'h2',
         null,
+        '@',
         this.props.thumbTitle
       ),
       _react2['default'].createElement('img', { src: this.props.thumbnail }),
       _react2['default'].createElement(
         'span',
-        null,
+        { className: 'likesSpan' },
         'Likes: ',
         this.props.likes
       ),

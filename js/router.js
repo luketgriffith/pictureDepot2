@@ -77,6 +77,7 @@ let Router = Backbone.Router.extend({
   edit(id){
     let dumpster = this.users.toJSON().find(item=>item.objectId === id)
     ReactDom.render(<EditPost
+    goback={()=>this.goto(`/`)}
     thumbnail ={dumpster.image}
     thumbTitle={dumpster.userName} 
     likes = {dumpster.likes}
@@ -97,6 +98,7 @@ let Router = Backbone.Router.extend({
     setTimeout(this.goto(`/`), 5000);
     
   }
+
   }/>, document.querySelector('.app'))
   
     

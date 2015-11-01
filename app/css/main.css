@@ -2025,7 +2025,7 @@ html {
   content: ""; }
 
 body {
-  background: #e2ebf3; }
+  background: #222930; }
 
 .app {
   max-width: 75%;
@@ -2034,14 +2034,24 @@ body {
 .top {
   max-width: 75%;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  color: #E9E9E9;
+  border-bottom: 1px solid #4EB1BA;
+  font-family: 'BenchNine', sans-serif;
+  font-size: 24px; }
+  .top button {
+    color: #4EB1BA;
+    font-weight: bold; }
 
 .mainDivs {
   width: 25%;
   float: left;
   margin: 20px 3.5%;
-  background-color: #B5B6B6;
-  box-shadow: 0 10px 6px -6px #777; }
+  background-color: #4EB1BA;
+  border-radius: 5px;
+  font-family: 'BenchNine', sans-serif;
+  box-shadow: 0 10px 10px -5px #E9E9E9;
+  color: #E9E9E9; }
   .mainDivs h2 {
     margin: 4px 8px;
     margin-top: 6px; }
@@ -2050,21 +2060,26 @@ body {
     clear: left;
     max-width: 100%; }
   .mainDivs .likesCaption p {
+    font-size: 20px;
     white-space: nowrap;
     width: 100%;
     overflow: hidden;
-    text-overflow: ellipsis; }
+    text-overflow: ellipsis;
+    margin-bottom: 2px; }
   .mainDivs .likesCaption span {
     float: left; }
 
 .imgDiv {
   max-width: 100%;
-  background-color: #B5B6B6;
+  background-color: #4EB1BA;
   padding: 5px; }
   .imgDiv img {
     max-width: 100%;
     height: 200px;
     margin: 0 auto; }
+
+.imgDiv:hover {
+  cursor: pointer; }
 
 .addDiv {
   max-width: 75%;
@@ -2094,5 +2109,49 @@ body {
 .backBtn {
   width: 18%;
   margin: 10px; }
+
+.chimichangas {
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 6px -6px #777;
+  color: #E9E9E9;
+  border-bottom: 1px solid #4EB1BA;
+  font-family: 'BenchNine', sans-serif;
+  font-size: 24px; }
+  .chimichangas img {
+    display: block;
+    max-width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 10px 6px -6px #777; }
+  .chimichangas .likesSpan {
+    background-color: #E9E9E9;
+    border-radius: 2px;
+    color: #4EB1BA;
+    font-weight: bold; }
+  .chimichangas button {
+    color: #4EB1BA;
+    font-weight: bold; }
+
+.enchiladas {
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 6px -6px #777;
+  color: #E9E9E9;
+  border-bottom: 1px solid #4EB1BA;
+  font-family: 'BenchNine', sans-serif;
+  font-size: 24px; }
+  .enchiladas img {
+    display: block;
+    max-width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 10px 6px -6px #777; }
+  .enchiladas .likesSpan {
+    background-color: #E9E9E9;
+    border-radius: 2px;
+    color: #4EB1BA;
+    font-weight: bold; }
+  .enchiladas button {
+    color: #4EB1BA;
+    font-weight: bold; }
 
 /*# sourceMappingURL=main.css.map */
